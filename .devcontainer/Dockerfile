@@ -1,5 +1,5 @@
 # Étape 1 : image de base
-FROM mcr.microsoft.com/devcontainers/base:noble
+FROM mcr.microsoft.com/devcontainers/base:ubuntu
 
 # Étape 2 : mettre à jour et installer des paquets système
 RUN apt update && apt-get install -y \
@@ -10,5 +10,5 @@ RUN apt update && apt-get install -y \
  && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Étape 3 : définir le répertoire de travail
-WORKDIR /workspace
+WORKDIR /workspaces
 
